@@ -3,7 +3,9 @@ BUILD_IMAGE := golang
 
 DOCKER_REPO := rsysio
 DOCKER_IMAGE := hello-go
-DOCKER_TAG ?= latest
+DOCKER_TAG ?= $(shell git rev-parse --short HEAD)
+
+.PHONY: build run publish
 
 build:
 	docker build -t $(DOCKER_REPO)/$(DOCKER_IMAGE):$(DOCKER_TAG) .
