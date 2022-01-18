@@ -4,5 +4,5 @@
 build:
 	@docker build -t hello .
 
-run:
+run: build
 	docker run hello
