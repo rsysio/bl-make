@@ -1,4 +1,4 @@
-.PHNONY: build run
+.PHONY: build run
 .SILENT: run
 
 build:
